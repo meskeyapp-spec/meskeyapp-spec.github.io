@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meskey – Appli de budget et suivi des dépenses, sans compte ni banque</title>
+<meta name="description" content="Gestion de budget et dépenses : voix, photo, Excel. Sans compte ni banque. Meskey est une appli de gestion de budget et de suivi des dépenses qui te montre d'un coup d'œil combien tu as, combien il te reste avant la paie et quelles factures arrivent à échéance.">
+<link rel="canonical" href="https://meskeyapp-spec.github.io/fr/">
+<link rel="alternate" hreflang="it" href="https://meskeyapp-spec.github.io/">
+<link rel="alternate" hreflang="en" href="https://meskeyapp-spec.github.io/en/">
+<link rel="alternate" hreflang="es" href="https://meskeyapp-spec.github.io/es/">
+<link rel="alternate" hreflang="fr" href="https://meskeyapp-spec.github.io/fr/">
+<link rel="alternate" hreflang="de" href="https://meskeyapp-spec.github.io/de/">
+<link rel="alternate" hreflang="pt" href="https://meskeyapp-spec.github.io/pt/">
+<link rel="alternate" hreflang="x-default" href="https://meskeyapp-spec.github.io/en/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Meskey – Appli de budget et suivi des dépenses, sans compte ni banque">
+<meta property="og:description" content="Gestion de budget et dépenses : voix, photo, Excel. Sans compte ni banque. Meskey est une appli de gestion de budget et de suivi des dépenses qui te montre d'un coup d'œil combien tu as, combien il te reste avant la paie et quelles factures arrivent à échéance.">
+<meta property="og:url" content="https://meskeyapp-spec.github.io/fr/">
+<meta property="og:image" content="https://meskeyapp-spec.github.io/assets/cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2B7A78">
+<link rel="icon" href="/assets/icon-192.png">
+<style>
+:root{--teal:#2B7A78;--teal-d:#1f5c5a;--accent:#4ECDC4;--bg:#F1F4F2;--text:#1D2B25;--muted:#5d6e68;--card:#fff;--line:#dfe6e2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg)}
+a{color:var(--teal-d)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.top{background:var(--teal);color:#fff}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:700;font-size:20px}
+.brand img{width:34px;height:34px;border-radius:8px}
+nav.lang{display:flex;gap:6px;flex-wrap:wrap}
+nav.lang a{color:#fff;text-decoration:none;font-size:14px;padding:4px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.35)}
+nav.lang a[aria-current]{background:#fff;color:var(--teal-d);font-weight:700}
+.hero{background:linear-gradient(180deg,var(--teal),var(--teal-d));color:#fff;padding:36px 0 0;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:end}
+.hero h1{font-size:clamp(28px,4.2vw,44px);line-height:1.15;margin:0 0 14px}
+.hero p.sub{font-size:19px;opacity:.95;margin:0 0 22px}
+.btn{display:inline-block;background:#fff;color:var(--teal-d);font-weight:700;text-decoration:none;padding:14px 22px;border-radius:14px;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.btn:hover{background:var(--accent);color:#103b39}
+.trial{font-size:14px;opacity:.9;margin-top:10px}
+.shots{display:flex;gap:12px;justify-content:center;align-items:flex-end}
+.shots img{width:31%;max-width:190px;height:auto;border-radius:18px 18px 0 0;box-shadow:0 6px 24px rgba(0,0,0,.3);background:#fff}
+.shots img:nth-child(2){transform:translateY(-14px)}
+main{padding:36px 0 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:0 0 20px}
+.card h2{margin:0 0 10px;font-size:20px;color:var(--teal-d);letter-spacing:.02em}
+.card p{margin:0 0 10px}
+.card ul{margin:0;padding-left:22px}.card li{margin:6px 0}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+footer{padding:26px 0 40px;color:var(--muted);font-size:14px}
+footer a{color:var(--muted)}
+.fl{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:10px}
+article{max-width:760px;margin:0 auto}
+article h1{font-size:clamp(28px,4vw,38px);line-height:1.2;margin:8px 0 12px}
+article h2{font-size:24px;margin:34px 0 8px;color:var(--teal-d)}
+article p,article li{font-size:18px}
+article .lead{font-size:20px;color:#33433d}
+table{border-collapse:collapse;width:100%;margin:14px 0 6px;font-size:16px;background:#fff;border-radius:12px;overflow:hidden}
+th,td{padding:10px 14px;border-bottom:1px solid var(--line);text-align:left}
+th{background:#e6f0ee;color:var(--teal-d)}td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td{font-weight:700;background:#f4faf9}
+.note{font-size:14px;color:var(--muted)}
+.cta-box{background:var(--teal);color:#fff;border-radius:18px;padding:24px;margin:30px 0;text-align:center}
+.cta-box h2{color:#fff;margin:0 0 8px}.cta-box p{margin:0 0 16px}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.shots{margin-top:6px}.cols{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Meskey","operatingSystem":"Android","applicationCategory":"FinanceApplication","description":"Meskey est une appli de gestion de budget et de suivi des dépenses qui te montre d'un coup d'œil combien tu as, combien il te reste avant la paie et quelles factures arrivent à échéance. Note tes revenus et tes dépenses en quelques secondes avec la voix, une photo du ticket ou l'import de ton relevé : sans compte et sans connexion bancaire, tes données restent sur ton téléphone.","url":"https://meskeyapp-spec.github.io/fr/","inLanguage":"fr","downloadUrl":"https://play.google.com/store/apps/details?id=app.meskey.android","image":"https://meskeyapp-spec.github.io/assets/cover.png","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","name":"NG Servizi Arredo di Nuncibello Giuseppe"}}</script>
+</head>
+<body><header class="top"><div class="wrap"><a class="brand" href="/fr/"><img src="/assets/icon-192.png" alt="" width="34" height="34">Meskey</a><nav class="lang" aria-label="Language"><a href="/" hreflang="it" lang="it">IT</a><a href="/en/" hreflang="en" lang="en">EN</a><a href="/es/" hreflang="es" lang="es">ES</a><a href="/fr/" hreflang="fr" lang="fr" aria-current="page">FR</a><a href="/de/" hreflang="de" lang="de">DE</a><a href="/pt/" hreflang="pt" lang="pt">PT</a></nav></div></header><section class="hero"><div class="wrap"><div><h1>Garde ton budget sous contrôle, sans relier ta banque</h1><p class="sub">Gestion de budget et dépenses : voix, photo, Excel. Sans compte ni banque.</p><a class="btn" href="https://play.google.com/store/apps/details?id=app.meskey.android&referrer=utm_source%3Dsito%26utm_medium%3Dweb%26utm_campaign%3Dhome-fr" rel="noopener">Télécharger sur Google Play</a><div class="trial">Essai gratuit de 14 jours · Sans compte</div></div><div class="shots"><img src="/assets/en-1-bilancio.jpg" alt="Captures de Meskey" width="190" height="338" loading="lazy"><img src="/assets/en-4-uscite.jpg" alt="Captures de Meskey" width="190" height="338" loading="lazy"><img src="/assets/en-5-ai.jpg" alt="Captures de Meskey" width="190" height="338" loading="lazy"></div></div></section><main><div class="wrap"><section class="card"><p style="font-size:19px;margin:0">Meskey est une appli de gestion de budget et de suivi des dépenses qui te montre d'un coup d'œil combien tu as, combien il te reste avant la paie et quelles factures arrivent à échéance. Note tes revenus et tes dépenses en quelques secondes avec la voix, une photo du ticket ou l'import de ton relevé : sans compte et sans connexion bancaire, tes données restent sur ton téléphone.</p></section><section class="card"><h2>Ce que tu peux faire</h2><ul><li>Solde et échéances : vois ton solde actuel, le temps avant ta prochaine rentrée et les dépenses à venir.</li><li>Dépenses et revenus par catégorie : graphiques clairs, comparaisons mensuelles et tendances.</li><li>Saisie rapide : écris une dépense, dicte-la à la voix ou photographie le ticket.</li><li>Scan avec IA : photographie ou importe des documents et tickets, l'appli en extrait montant, date et description.</li><li>Import Excel, CSV et PDF : importe ton relevé bancaire et catégorise les opérations.</li><li>Prêts et mensualités : garde le contrôle de tes prêts, échéances et tableaux d'amortissement.</li><li>Assistant IA : pose des questions sur tes dépenses (« Combien ai-je dépensé le mois dernier ? », « Combien me reste-t-il jusqu'à la paie ? ») et reçois des réponses à titre informatif.</li><li>Widgets et rappels : solde et saisie rapide depuis l'écran d'accueil, notifications d'échéances.</li><li>Sauvegardes manuelles et automatiques dans le dossier de ton choix, protection par code PIN et empreinte.</li><li>Italien, anglais, espagnol, français, allemand et portugais.</li></ul></section>
+<section class="card"><h2>La confidentialité d'abord</h2><p>Pas de compte, pas de publicité. Les fonctions IA n'envoient au service que le nécessaire pour répondre, et seulement quand tu les utilises.</p></section>
+<section class="card"><h2>Formules</h2><p>Tu peux essayer Meskey gratuitement. Après l'essai, choisis une formule (Basic, Pro, Pro+) avec abonnement mensuel via Google Play ; Pro et Pro+ incluent des points IA mensuels et tu peux acheter des packs de crédits IA supplémentaires. Tu peux résilier à tout moment dans Google Play.</p></section>
+<section class="card"><h2>Pour qui</h2><ul><li>Pour ceux qui veulent suivre leurs dépenses du mois et le budget du foyer sans relier leur compte bancaire.</li><li>Pour ceux qui oublient les factures, abonnements et mensualités.</li><li>Pour ceux qui ont des tickets, factures et documents à classer par catégorie.</li><li>Pour ceux qui préfèrent une appli discrète, sans publicité et sans inscription.</li></ul></section>
+<section class="card"><h2>Remarque importante</h2><p>Meskey est un outil de gestion et ne fournit pas de conseil financier : les réponses de l'assistant IA sont informatives et peuvent contenir des erreurs.</p></section></div></main><footer><div class="wrap"><div class="fl"><a href="https://meskeyapp-spec.github.io/meskey-privacy/">Confidentialité</a><a href="mailto:meskey.app@gmail.com">Contact</a></div><div>Meskey est une appli de NG Servizi Arredo di Nuncibello Giuseppe · TVA 04845940271 · Via Scortegaretta 2, 30035 Mirano (VE), Italie</div></div></footer></body></html>
